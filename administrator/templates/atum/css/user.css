@@ -12,31 +12,59 @@ body {
 	--body-line-height: 1.4;
 
 	/* user.css specific dclarations */
-	--user-sidebar-font-size: 0.9rem;
+	--user-sidebar-font-size: var(--body-font-size);
 	--user-sidebar-width: 16rem;
 	--user-sidebar-item-height: 40px;
 	--user-sidebar-item-height-level2: calc(var(--user-sidebar-item-height) * 0.90);
 	--user-sidebar-item-height-level3: calc(var(--user-sidebar-item-height) * 0.85);
 
-	--user-table-header-font-size: 0.9rem;
-	--user-table-body-font-size: 0.875rem;
-	--user-table-body-line-height: 0.875rem;
+	--user-table-header-font-size: var(--body-font-size);
+	--user-table-body-font-size:  var(--body-font-size);
+	--user-table-body-line-height:  var(--body-font-size);
 
 	--user-cpanel-module-header-font-size: 1.1rem;
 
 	--user-quick-icon-font-size: 0.8rem;
 	--user-quick-icons-line-height: 1.1rem;
 
-	--user-button-font-size: 0.76rem;
-	--user-button-line-height: 1.25;
+	--user-button-font-size: var(--body-font-size);
+	--user-button-line-height: 1.25rem;
 
-	--user-small-font-size: 0.76rem;
+	--user-small-font-size: var(--body-font-size);
 	--user-small-line-height: 1.1rem;
 
 	--user-logo-width: var(--user-sidebar-width);
 
 	font-size: var(--body-font-size);
 	line-height: var(--body-line-height);
+}
+
+.js-stools .form-control,
+.js-stools .form-select {
+	font-size: var(--body-font-size);
+	line-height: var(--user-button-line-height);
+	padding: 0.25rem 0.75rem !important;
+}
+
+.js-stools .choices,
+.js-stools .choices__inner,
+.js-stools .choices__input {
+	font-size: var(--body-font-size);
+	line-height: var(--user-button-line-height);
+}
+
+.js-stools .choices__input {
+	padding: 0.25rem 0 !important;
+}
+
+.js-stools .choices__inner {
+	min-height: var(--user-button-line-height);
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#list-limit {
+	min-width: 6rem;
 }
 
 /* remove login screen logo & sidebar */
@@ -160,4 +188,11 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: var(--user-button-line-height);
 	padding: 0.25rem 0.75rem;
 	font-size: var(--user-button-font-size);
+}
+
+/**
+ * DMA specific customizations.
+ */
+.nav.initially-active {
+	display: block;
 }
