@@ -186,6 +186,44 @@ h1, h2, h3, h4, h5, h6 {
 .subhead .btn {
 	font-weight: 400;
 	line-height: var(--user-button-line-height);
-	padding: 0.25rem 0.75rem;
+	padding: 0.20rem 0.75rem 0.30rem;
 	font-size: var(--user-button-font-size);
+}
+
+/**
+ * Additional adjustments by Obix webtechniek, including form elements
+ * in the reduction of the "super sized" look.
+ * https://github.com/pjdevries/J4Atum-user-css/tree/obix-modifications
+ */
+label {
+	font-size: var(--body-font-size);
+}
+
+.form-control {
+	font-size: var(--body-font-size);
+	line-height: var(--body-line-height);
+	padding: 0.25rem 0.75rem;
+}
+
+.choices__inner {
+	padding: 0;
+	min-height: 0;
+}
+
+.form-select,
+.choices__item,
+.choices__input {
+	font-size: var(--body-font-size);
+	line-height: var(--body-line-height);
+	padding: 0.25rem 0.75rem;
+	min-height: 0;
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+	padding-bottom: 0;
+}
+
+.choices__list--single,
+.choices__list--multiple {
+	padding: 0;
 }
